@@ -281,4 +281,19 @@ EOF
       end
     end
   end
+  describe 'handling of geospatial columns' do
+    GEOSPATIAL_MAP = <<EOS 
+---
+db:
+  collection_with_gis_points:
+    :meta:
+      :table: gissqltable
+    :columns:
+      - id:
+        :source: _id
+        :type: TEXT
+      - geocode: GEOMETRY(Point)
+EOS
+  #TODO: continue test here
+  end
 end
